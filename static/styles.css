@@ -1,0 +1,524 @@
+/* All code written by Linn Klofta 2024 */
+
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Klemer'; /* Name you want to use in your CSS */
+    src: url('/static/KlemerDisplayDemoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+  
+}
+
+body {
+    background-color: #FCF2F7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 10px 20px;
+    height: 80px; 
+    box-sizing: border-box; 
+    background: linear-gradient(white 70%, #FCF2F7);
+}
+
+ul {
+    padding-left: 20px;
+    margin: 10px 0; 
+}
+
+li {
+    margin-bottom: 10px; 
+}
+
+#footercp {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 30px;
+    color: #c61c8e;
+}
+
+#footercpScenario {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 220px;
+    color: #948ced;
+}
+
+
+
+
+/* TEXT */
+
+#bodytext {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 150px;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Klemer', "Montserrat", sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#h2Header {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+#h2HeaderHowTo {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#h3Header {
+    font-size: 23px;
+    font-weight: 300;
+}
+
+#scenarioHeader {
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    line-height: 1.2;
+}
+
+#mainH1 {
+    padding-top: 40px;
+    color: #e38dc3;
+}
+
+#secondH1 {
+    color: #edb3d6;
+    font-family: 'Klemer', "Montserrat", sans-serif;
+}
+
+#howtotext {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+/* BUTTONS */
+
+#PlayButton {
+    width: 50px;
+    animation: wiggle 0.5s infinite ease-in-out;
+}
+
+#LargePlayButton {
+    padding-top: 100px;
+    width: 180px;
+}
+
+#LargePlayButton:hover {
+    transform: scale(1.3);
+}
+
+#LargePlayButtonHowTo {
+    padding-top: 380px;
+    width: 350px;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.choice-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    background-color: #F7DDEC;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+    font-size: 21px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.choice-buttons button:hover {
+    background-color: #F2C8E1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* NAV */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Vertically center the nav items */
+}
+
+.nav-left li {
+    margin-right: 20px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-left a:hover {
+    color: #E38DC3;
+}
+
+#imglogo {
+    width: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-right {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.nav-active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* MAIN INDEX PAGE */
+.large-play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; 
+}
+
+
+
+
+
+
+
+/* SCENARIO PAGE */
+.scenario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.scenario-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scenario-box:hover {
+    transform: scale(1.02);
+}
+
+.scenario-image {
+    width: 200px;
+    margin-right: 1rem;
+}
+
+.scenario-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 21px;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+.scenario {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 21px;
+    padding-right: 40px;
+}
+
+
+
+
+/* GAME */
+
+.game-container {
+    width: 100%;
+    margin: 0 auto;
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between left and right sections */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    padding: 20px;
+}
+
+
+.left-section {
+    width: 50%; /* Chat-box will take up 40% of the screen width */
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.right-section {
+    width: 45%; /* Right section for outcomes and feedback */
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: calc(80vh - 100px); /* Set to 80% of the viewport height */
+    flex-grow: 1; /* Ensures right section fills remaining space */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: calc(80vh - 100px); /* Set to 80% of the viewport height */
+    max-height: calc(100vh - 100px); /* Prevent the chat-container from growing beyond 100vh */
+}
+
+
+.chat-box {
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from flex-end to ensure content appears from top */
+    box-sizing: border-box;
+    height: 100%; /* Ensure the chat-box fills the height of chat-container */
+    scroll-behavior: smooth;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+    font-size: 21px;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.her-message {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 55%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.additional-message {
+
+
+}
+
+#searchimg {
+    width: 150px;
+    padding-right: 10px;
+}
+
+.user-image, .her-image {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+.statistics-panel {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.statistics-panel h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.stat-item {
+    margin-bottom: 10px;
+}
+
+.stat-item strong {
+    color: #333;
+}
+
+.stat-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.choices-log {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+
+
+
+
+
+
+
+/* HOW TO PLAY PAGE */
+#howTo {
+    display: flex;
+    padding: 20px;
+    margin-top: -40px;
+    height: calc(80vh - 180px);
+}
+
+.left-column, .right-column {
+    width: 50%; /* Each column takes 50% of the width */
+    padding: 20px; /* Add some padding */
+}
+
+.left-column {
+    border-right: 1px solid #ccc; /* Optional: adds a separator line between columns */
+}
+
+#pc {
+    display: block;
+    margin-bottom: -60%;
+    width: 100%;
+    animation: pulse 5s infinite ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+/* ABOUT PAGE */
+#about {
+    text-align: center; /* Center the content */
+}
+
+#about p {
+    padding-top: 30px;
+    font-size: 24px;
+    line-height: 1.7;
+    max-width: 95%; /* Adjust to prevent overflow */
+    margin: 0 auto;
+}
+
+.btcenter {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02); /* Slightly enlarge the message */
+  }
+  100% {
+    transform: scale(1);
+  }
+}

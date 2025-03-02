@@ -1,0 +1,60 @@
+<!--All code written by Vaishnavi Manivannan-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnBias - Play</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="#"><img id="imglogo" src="/static/images/BB.png" alt=""></a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/howto">How to play</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="/scenario" id="play-button">
+
+                        <img src="/static/images/play.svg" alt="Play Button" id="PlayButton">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 id="mainH1">Un<span id="secondH1">Bias</span></h1>
+
+        <div class="scenario-container">
+            <div class="scenario-box" onclick="window.location.href='/game/1'">
+                <img src="/static/images/meeting.png" alt="Scenario 1" class="scenario-image">
+                <div class="scenario-description">
+                    <h2 id="scenarioHeader">Addressing Gender Bias</h2>
+                    <p>
+                        A woman frequently aligns herself with male colleagues and dismisses other women’s concerns about gender bias, reflecting internalized sexism. She downplays issues like gender inequality and workplace discrimination. The scenario focuses on how to engage her in a constructive conversation to help her understand the importance of being an ally to other women and promoting gender equality in the workplace.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="scenario-box" onclick="window.location.href='/game/2'">
+                <img src="/static/images/image0-2.jpg" alt="Scenario 2" class="scenario-image">
+                <div class="scenario-description">
+                    <h2 id="white">Reporting Sexual Harassment and Facing Potential Workplace Retaliation</h2>
+                    <p id="white">
+                        A woman experiences sexual harassment in the workplace and considers reporting the issue to HR. She fears that speaking up might lead to retaliation, such as being passed over for promotions or being ostracized by colleagues. The scenario explores how she handles reporting the incident, navigating the company’s response, and dealing with potential backlash.
+                    </p>
+                </div>
+            </div> 
+
+        </div>
+    </main>
+    <footer>
+        <p id="footercpScenario">© 2025 Vaishnavi Manivannan</p>
+    </footer>
+    
+</body>
+</html>
